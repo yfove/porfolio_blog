@@ -1,6 +1,6 @@
-
 from django.db import models
 
+# Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=20)
 
@@ -16,3 +16,4 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
+
